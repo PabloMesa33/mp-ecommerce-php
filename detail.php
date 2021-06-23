@@ -130,7 +130,7 @@
                                             <?php echo "$" . $_POST['unit'] ?>
                                         </h3>
                                     </div>
-                                    <button type="submit" class="mercadopago-button" formmethod="post">Pagar</button>
+                                    <button onclick="location.href = 'www.youtube.com';" id="myButton" class="float-left submit-button" type="submit" class="mercadopago-button" formmethod="post">Pagar</button>
                                 </div>
                             </div>
                         </div>
