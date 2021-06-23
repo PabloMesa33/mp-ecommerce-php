@@ -130,7 +130,7 @@
                                             <?php echo "$" . $_POST['unit'] ?>
                                         </h3>
                                     </div>
-                                    <button onclick="location.href = 'formulariopago.php';" type="submit" class="mercadopago-button" formmethod="post">Pagar</button>
+                                    <button onclick="location.href = 'Formulariopago.php';" type="submit" class="mercadopago-button" formmethod="post">Pagar</button>
                                 </div>
                             </div>
                         </div>
