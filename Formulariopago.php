@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <script src="https://secure.mlstatic.com/sdk/javascript/v1/mercadopago.js"></script>
+<script> window.Mercadopago.setPublishableKey("TEST-2b8c7dd7-c0de-41a8-afee-5cad7821372c")></script>
+<script> window.Mercadopago.getIdentificationTypes()></script>
 <form action="/process_payment" method="post" id="paymentForm">
    <h3>Detalles del comprador</h3>
      <div>
