@@ -28,6 +28,8 @@ function setPaymentMethod(status, response) {
        alert(`payment method info error: ${response}`);
    }
 }
+</script>
+<script>
 function getIssuers(paymentMethodId) {
    window.Mercadopago.getIssuers(
        paymentMethodId,
@@ -51,6 +53,29 @@ function setIssuers(status, response) {
        );
    } else {
        alert(`issuers method info error: ${response}`);
+   }
+}
+</script>
+<script>
+function getInstallments(paymentMethodId, transactionAmount, issuerId){
+   window.Mercadopago.getInstallments({
+       "payment_method_id": paymentMethodId,
+       "amount": parseFloat(transactionAmount),
+       "issuer_id": parseInt(issuerId)
+   }, setInstallments);
+}
+
+function setInstallments(status, response){
+   if (status == 200) {
+       document.getElementById('installments').options.length = 0;
+       response[0].payer_costs.forEach( payerCost => {
+           let opt = document.createElement('option');
+           opt.text = payerCost.recommended_message;
+           opt.value = payerCost.installments;
+           document.getElementById('installments').appendChild(opt);
+       });
+   } else {
+       alert(`installments method info error: ${response}`);
    }
 }
 </script>
